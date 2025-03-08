@@ -45,8 +45,9 @@ const Forum = () => {
     },
   ];
   return (
-    <div className="bg-white">
-      <div className="container mx-auto px-4 py-28 lg:my-0 max-w-6xl">
+    <div className="bg-white pt-20 lg:pt-40">
+      <div className="container mx-auto px-4 py-28 lg:py-0 max-w-6xl">
+        {/* lg:my-0 */}
         <div className="text-center mb-6">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
             업무 게시판
@@ -75,7 +76,6 @@ const Forum = () => {
             </svg>
           </Link>
         </div>
-
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           {dummyPosts.length === 0 ? (
             <div className="p-6 text-center text-gray-500">
@@ -97,7 +97,9 @@ const Forum = () => {
                         조회수: {post.views}
                       </span>
                       {post.fileUrl.length > 0 && (
-                        <span>파일: {post.fileUrl.length}</span>
+                        <span className="text-gray-500 text-sm">
+                          파일: {post.fileUrl.length}
+                        </span>
                       )}
                     </div>
                     <h3 className="text-xl font-semibold text-gray-800 hover:text-blue-600 transition-colors duration-300">
